@@ -1,0 +1,173 @@
+.text-red {
+  color: red !important;
+}
+
+.late {
+  display: none;
+}
+
+body {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  margin-top: -33px;
+}
+
+.small-white {
+  color: white;
+  @include media-breakpoint-up(lg) {
+    color: black;
+  }
+}
+
+.hero-text {
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: 30%;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//netflix
+
+.load-holder {
+  width: 100%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 30%;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 100px auto 0px auto;
+  height: 190px;
+  width: 100px;
+  animation-name: scale-in;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.n1 {
+  position: absolute;
+  background-color: #b1060f;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(1% 98%, 0% 98%, 36% 97%, 37% 97%);
+  z-index: 1;
+  opacity: 0;
+  animation-name: n1-animate;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.n2-container {
+  position: absolute;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.587));
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.n2 {
+  background-color: #e50914;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  clip-path: polygon(1% 2%, 2% 2%, 37% 2%, 37% 2%);
+  z-index: 2;
+  opacity: 0;
+  animation-name: n2-animate;
+  animation-duration: 0.4s;
+  animation-delay: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.n3 {
+  position: absolute;
+  background-color: #b1060f;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(64% 96%, 63% 96%, 100% 98%, 100% 98%);
+  z-index: 1;
+  bottom: 1px;
+  animation-name: n3-animate;
+  animation-duration: 0.4s;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+@keyframes n1-animate {
+  0% {
+    clip-path: polygon(1% 98%, 0% 98%, 36% 97%, 37% 97%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(1% 2%, 0 98%, 36% 97%, 37% 2%);
+    opacity: 1;
+  }
+}
+
+@keyframes n2-animate {
+  0% {
+    clip-path: polygon(1% 2%, 2% 2%, 37% 2%, 37% 2%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(1% 2%, 63% 96%, 100% 98%, 37% 2%);
+    opacity: 1;
+  }
+}
+
+@keyframes n3-animate {
+  0% {
+    clip-path: polygon(64% 96%, 63% 96%, 100% 98%, 100% 98%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(64% 2%, 63% 96%, 100% 98%, 100% 2%);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
